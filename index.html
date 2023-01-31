@@ -11,24 +11,26 @@
 </head>
 
 <body background="images/fondo.png">
-  
+    <script src="scripts.js"></script>
+
     <!-- Header de la página -->     
     <header>
-        <h1>ROCÍO RODRIGUEZ</h1>
+        <h1 id="titulo">ROCÍO RODRIGUEZ</h1>
         <h3>Currículum vitae</h3>
-        <img src="images/favicon.ico.jpg" alt="La imagen no se cargó exitosamente. Intente nuevamente más tarde."
-        style="width:150px;height:150px;">
+        <img src="images/favicon.ico.jpg" 
+             alt="La imagen no se cargó exitosamente. Intente nuevamente más tarde."
+             style="width:150px;height:150px;">
     </header>
 
 
     <!-- Barra horizontal de navegación --> 
     <nav>  
-        <ul>
-            <li><a href="#datos personales"> Datos Personales</a></li>
-            <li><a href="#habilidades"> Habilidades </a></li>
-            <li><a href="#estudios realizados"> Estudios realizados </a></li>
-            <li><a href="#experiencia laboral"> Experiencia laboral</a></li>
-            <li><a href="#contacto"> Contacto</a></li>
+        <ul >
+            <li onmouseover="resaltarOpcion('opcionDatosPersonales')" onmouseout="resetearOpcion('opcionDatosPersonales')"><a href="#datos personales" id="opcionDatosPersonales"> Datos Personales </a></li>
+            <li onmouseover="resaltarOpcion('opcionHabilidades')" onmouseout="resetearOpcion('opcionHabilidades')"><a href="#habilidades" id="opcionHabilidades"> Habilidades </a></li>
+            <li onmouseover="resaltarOpcion('opcionEstudiosRealizados')" onmouseout="resetearOpcion('opcionEstudiosRealizados')"><a href="#estudios realizados" id="opcionEstudiosRealizados"> Estudios realizados </a></li>
+            <li onmouseover="resaltarOpcion('opcionExperienciaLaboral')" onmouseout="resetearOpcion('opcionExperienciaLaboral')"><a href="#experiencoa laboral" id="opcionExperienciaLaboral"> Experiencia laboral </a></li>
+            <li onmouseover="resaltarOpcion('opcionContacto')" onmouseout="resetearOpcion('opcionContacto')"><a href="#contacto" id="opcionContacto"> Contacto </a></li>
         </ul>
     </nav>
 
@@ -81,7 +83,7 @@
     <section id="estudios realizados">
         <header>Estudios realizados</header>
         <article>
-            <table>
+            <table align="center">
                 <tr>
                     <th>Institución</th>
                     <th>Año</th>
@@ -93,7 +95,8 @@
                     <td>Profesional pastelero</td>
                 </tr>
                 <tr>
-                    <td>Pastelería y escuela de decoración Adiana Bologña</td>                        <td>2012</td>
+                    <td>Pastelería y escuela de decoración Adiana Bologña</td>                        
+                    <td>2012</td>
                     <td>Pastelería y decoración de tortas</td>
                 </tr>
                 <tr>
@@ -116,27 +119,50 @@
     <section id="experiencia laboral">
         <header>Experiencia laboral</header>
         <article>
+            <form align="right">
+                <input type="checkbox" id="experienciaLaboral" onclick="ocultarExperienciaLaboral()">
+                <label for="experienciaLaboral"> Ver más</label>
+            </form>
+
+            <!-- Lista de experiencia básica --> 
             <ul>
-                <li>Cafetería Peter Pan| La Plata</li>
+                <li>Cafetería Peter Pan | La Plata<br>
                     Pastelera<br>
                     (6/2016) - (10/2020)<br>
-                    Control de inventario y almacenaje de ingredientes.
-                    Dominio del horneado y el atemperado del género.
-                    Conocimiento de los productos y procesos habituales de la pastelería caliente y fría.    
-                    <br><br>
-                <li>Merengue| Quilmes</li>
-                    Pastelera<br>
-                    (3/2017) - (02/2021)<br>
-                    Control de la calidad de la materia prima.
-                    Conocimiento de la preelaboración y conservación de alimentos.
-                    Elaboración artesanal de todo tipo de masas base para pastelería y bollería.
-                    <br><br>
-                <li>Pastelería Lumi| Capital</li>
+                    Control de inventario y almacenaje de ingredientes.<br>
+                    Dominio del horneado y el atemperado del género.<br><br>
+                </li>
+                <li>Pastelería Lumi | Capital<br>
                     Repostera<br>
                     (12/2015) - (2/2022)<br>
-                    Experiencia realizando elaboraciones complementarias para la repostería tales como jarabes, siropes, mermeladas, gelatinas, fondant y praliné.
-                    Experiencia en la dosificación de los ingredientes de acuerdo con la formulación y conforme al orden establecido.
-                    Elaboración de bandejas con postres atractivas para eventos de catering.
+                    Experiencia realizando elaboraciones complementarias para la repostería tales como jarabes, siropes, mermeladas, gelatinas, fondant y praliné.<br>
+                    Experiencia en la dosificación de los ingredientes de acuerdo con la formulación y conforme al orden establecido.<br><br>
+                </li>
+                <li>Merengue | Quilmes<br>
+                    Pastelera<br>
+                    (3/2017) - (02/2021)<br>
+                    Control de la calidad de la materia prima.<br>
+                    Conocimiento de la preelaboración y conservación de alimentos.<br><br>
+                </li>
+            </ul>
+
+            <!-- Lista de experiencia adicional (visible a pedido del usuario) -->             
+            <ul id="verMas" style="display:none">
+                <li>Café El Progreso | Berisso<br>
+                    Pastelera<br>
+                    (6/2020) - (10/2022)<br>
+                    Conocimiento de los productos y procesos habituales de la pastelería caliente y fría.<br><br>
+                </li>
+                <li>Panadería Las Malvinas | La Plata<br>
+                    Repostera<br>
+                    (12/2019) - (2/2022)<br>
+                    Elaboración de bandejas con postres atractivas para eventos de catering.<br><br>
+                </li>
+                <li>El Molino | Capital<br>
+                    Pastelera<br>
+                    (3/2022) - (02/2023)<br>
+                    Elaboración artesanal de todo tipo de masas base para pastelería y bollería.<br><br>
+                </li>
             </ul>
         </article>
         <footer>Rocío Rodriguez - 2023</footer>
@@ -147,7 +173,7 @@
     <section id="contacto">
         <header>Contacto</header>
         <article>
-            <form action="file:///C:/Dropbox/Curriculum_Vitae/trabajo_practico.html"  method="post">
+            <form action="#"  method="post">
                 <label>Nombre:</label>
                 <input type="text"  id="nombre" name="nombre" placeholder="Ingrese su nombre"/>
                 <br>
@@ -172,27 +198,10 @@
         <footer>Rocío Rodriguez - 2023</footer>
     </section>
 
-
-     <!-- Sección Datos de interés
-    <section id="datos de interés">
-        <header>Datos de interés:</header>
-        <article>
-                -Disponibilidad inmediata
-                -Flexibilidad horaria (incluidos fines de semana y dias festivos)
-                -Pasión por mi trabajo
-                -Cursos y seminarios
-                -Carnet de conducir y vehículo propio
-        </article>
-        <footer>Rocío Rodriguez 2023</footer>
-    </section>
-    --> 
-
-
     <!-- Footer de la página --> 
     <footer>
           Rocío Rodriguez - rociorodriguez23@gmail.com
     </footer>
-
-        
+    
 </body>
 </html>

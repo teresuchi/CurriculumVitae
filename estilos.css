@@ -3,15 +3,9 @@
 {
   color: rgb(17, 16, 17);
   background-color: white;
-  /**
-  font-size: 30px;
-  */
   font-weight: 300;
   box-sizing: border-box;
   font-family: 'Metrophobic', Arial, serif; 
-  /*
-  font-weight: 400;
-  */
 }
 
 body
@@ -32,7 +26,6 @@ nav
   text-align: center;
   background-color:rgb(204, 99, 50);
   border-radius: 5px;
-  /* Agregado por Diego:**/ 
   padding: 30px; 
   
 }
@@ -44,8 +37,7 @@ section
   background-color: rgb(199, 87, 36);
   border-radius: 5px;
   padding: 50px;
-  width: 100%; /* calc(100% - 150px);**/
-  /* margin: 0 50px 50px 50px; **/
+  width: 100%; 
   margin-top: 50px;
   margin-bottom: 50px; 
 }
@@ -54,7 +46,7 @@ header
 {
   margin-top: -50px;
   margin-bottom: 50px;
-  width: 100%;
+  width: 100%;  
   padding: 50px;
   text-align: center;
   background-color: chocolate;
@@ -104,8 +96,6 @@ nav ul
   list-style-type: none;
   padding: 0;
   margin-bottom: 0;
-    
-  /** Agregado por Diego: */
   margin-top: 0;
 }
 
@@ -113,20 +103,10 @@ nav li
 {
   display: inline-block;
   margin: 0 0 0 50px; 
-
-  /* width: 100px; **/
   width: 120px;
-  
-  /* Agregados por Diego: **/
   margin-left: 0;
   font-size: 12px; 
   text-align: left;  
-}
-
-/** Agregado por Diego: */
-nav li a
-{
-  font-size: 12px; 
 }
 
 h1, header, dt, th, form, label, input {
@@ -139,7 +119,7 @@ h1, header, dt, th, form, label, input {
   font-size: medium;
 }
 
-/* esto es para la tabla de estudios realizados*/
+/* esto es para la tabla de estudios realizados */
 table, th, td {
   border:1px solid black;
   border-collapse: collapse;
@@ -150,17 +130,3 @@ th {
   text-align: center;
  }
 
-/* Comentado por Diego
-nav li:first-child
-{
-  margin-left: 0;
-}
-*/
-
-/**
-footer
-{
- Agregado por Diego.
-  padding: 10px;  
-}
-*/
